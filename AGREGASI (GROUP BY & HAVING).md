@@ -41,6 +41,7 @@ Jabatan ENUM('Manager', 'Supervisor', 'Staff'),
 ```
 
 *HASIL :*
+
 ![](Assets/create.png)
 
 - `NIP` (tipe integer, berfungsi sebagai primary key)
@@ -68,7 +69,9 @@ Contoh :
 DESC pegawai
 ```
 
-![[assets/desc.PNG]]
+
+![](Assets/desc.png)
+
 
 *PENJELASAN :*
 > Deskripsi Tabel Pegawai
@@ -170,11 +173,14 @@ INSERT INTO pegawai (NIP, NDep, NBlk, JK, Alamat, Telp, Jabatan, Gaji, NoCab) VA
     - **Kolom Jabatan**: Pada baris data dengan **NIP** 10415 untuk **Susan Sumantri**, kolom Jabatan tidak diisi (`''`). Jika kolom Jabatan adalah ENUM (jenis kelamin) dan tidak mengizinkan nilai kosong, ini dapat menyebabkan masalah. Pastikan kolom Jabatan diisi dengan nilai yang valid seperti 'Staff' jika kolom tersebut tidak mengizinkan nilai kosong.
     - **Pembaruan Data**: Jika kolom Jabatan mengizinkan nilai kosong, Anda mungkin perlu memperbarui baris ini dengan jabatan yang sesuai. Jika tidak, Anda mungkin perlu menyesuaikan skema tabel untuk mengizinkan nilai kosong.
 **Hasil** :
-![[assets/isidata.PNG]]
+
+![](Assets/isidata.png)
+
 
 # Menghitung jumlah entri atau baris dalam kolom tertentu
 
-![[assets/lanjutan1.PNG]]
+![](Assets/lanjutan1.png)
+
 
 ### 1. **SELECT**
 
@@ -204,7 +210,8 @@ INSERT INTO pegawai (NIP, NDep, NBlk, JK, Alamat, Telp, Jabatan, Gaji, NoCab) VA
 
 # Menghitung jumlah pegawai yang terdaftar di cabang tertentu
 
-![[assets/lanjutan2.PNG]]
+![](Assets/lanjutan2.png)
+
 
 - **COUNT(NIP)**: Fungsi ini digunakan untuk menghitung jumlah baris dalam kolom `NIP` yang memiliki nilai non-null. Ini berarti fungsi akan menghitung berapa kali NIP (Nomor Induk Pegawai) muncul dalam tabel `pegawai`. Jika ada NIP yang null, baris tersebut tidak akan dihitung.
     
@@ -219,7 +226,7 @@ Hasil akhir dari perintah ini akan menampilkan jumlah pegawai yang terdaftar di 
 
 # Menghitung jumlah pegawai di setiap cabang yang berbeda
 
-![[assets/lanjutan3.PNG]]
+![](Assets/lanjutan3.png)
 
 
 - **NoCab**: Kolom ini mewakili kode cabang (`NoCab`). Perintah ini akan mengelompokkan data berdasarkan cabang yang berbeda, sehingga hasil akhirnya akan mencantumkan kode cabang bersama dengan jumlah pegawai di cabang tersebut.
@@ -235,7 +242,7 @@ Hasil dari perintah ini adalah daftar setiap cabang (`NoCab`) yang ada dalam tab
 
 # Menghitung jumlah pegawai di setiap cabang
 
-![[assets/lanjutan4.PNG]]
+![](Assets/lanjutan4.png)
 
 
 - **NoCab**: Ini merujuk pada kolom dalam tabel yang berisi kode cabang (`NoCab`). Perintah ini akan mengelompokkan hasil berdasarkan cabang yang berbeda.
@@ -253,7 +260,7 @@ Hasil dari perintah ini adalah daftar cabang (`NoCab`) yang memiliki setidaknya 
 
 # Menghitung total keseluruhan gaji dari semua pegawai
 
-![[assets/lanjutan5.PNG]]
+![](Assets/lanjutan5.png)
 
 
 - **SUM(Gaji)**: Fungsi `SUM` menjumlahkan semua nilai dalam kolom `Gaji` yang terdapat dalam tabel `pegawai`. Ini berarti total gaji dari semua pegawai yang tercatat dalam tabel akan dihitung.
@@ -267,7 +274,7 @@ Hasil dari perintah ini adalah satu nilai yang mewakili total keseluruhan gaji d
 
 # Menghitung total gaji dari semua pegawai yang memiliki jabatan sebagai "Manager"
 
-![[assets/lanjutan6.PNG]]
+![](Assets/lanjutan6.png)
 
 
 - **SUM(Gaji)**: Fungsi `SUM` digunakan untuk menjumlahkan semua nilai dalam kolom `Gaji` yang memenuhi kondisi tertentu, yaitu yang memiliki jabatan "Manager". Ini berarti total gaji dari semua pegawai dengan jabatan "Manager" akan dihitung.
@@ -282,7 +289,7 @@ Hasil dari perintah ini adalah satu nilai yang mewakili total keseluruhan gaji d
 
 # Menghitung total gaji yang dikeluarkan untuk setiap cabang
 
-![[assets/lanjutan7.PNG]]
+![](Assets/lanjutan7.png)
 
 
 - **NoCab**: Kolom ini mewakili kode cabang dalam tabel `pegawai`. Perintah ini akan mengelompokkan data berdasarkan nilai dalam kolom `NoCab`.
@@ -298,7 +305,7 @@ Hasil dari perintah ini adalah daftar setiap cabang (`NoCab`) yang ada dalam tab
 
 # Menghitung total gaji di setiap cabang dan hanya menampilkan cabang-cabang yang memiliki total gaji tertentu
 
-![[assets/lanjutan8.PNG]]
+![](Assets/lanjutan8.png)
 
 
 - **NoCab**: Kolom ini mewakili kode cabang dalam tabel `pegawai`. Perintah ini akan mengelompokkan hasil berdasarkan kode cabang.
@@ -316,7 +323,7 @@ Hasil dari perintah ini adalah daftar cabang (`NoCab`) yang memiliki total gaji 
 
 # Menghitung rata-rata gaji dari semua pegawai yang terdaftar
 
-![[assets/lanjutan9.PNG]]
+![](Assets/lanjutan9.png)
 
 
 - **AVG(Gaji)**: Fungsi `AVG` menghitung rata-rata dari nilai-nilai dalam kolom `Gaji`. Ini berarti fungsi ini akan menjumlahkan semua nilai gaji dan membagi hasilnya dengan jumlah baris yang memiliki nilai non-null dalam kolom `Gaji`.
@@ -330,7 +337,7 @@ Hasil dari perintah ini adalah satu nilai yang mewakili rata-rata gaji dari semu
 
 # Menghitung rata-rata gaji dari pegawai yang memiliki jabatan tertentu
 
-![[assets/lanjutan10.PNG]]
+![](Assets/lanjutan10.png)
 
 
 - **AVG(Gaji)**: Fungsi `AVG` digunakan untuk menghitung rata-rata nilai dalam kolom `Gaji`. Fungsi ini akan menjumlahkan semua nilai gaji untuk pegawai yang memenuhi kondisi yang ditentukan dan kemudian membagi jumlah tersebut dengan jumlah baris yang memenuhi kondisi.
@@ -346,7 +353,7 @@ Hasil dari perintah ini adalah satu nilai yang mewakili rata-rata gaji dari semu
 
 # Menghitung rata-rata gaji pegawai di setiap cabang
 
-![[assets/lanjutan11.PNG]]
+![](Assets/lanjutan11.png)
 
 - **NoCab**: Kolom ini merujuk pada kode cabang dalam tabel `pegawai`. Perintah ini akan mengelompokkan data berdasarkan nilai dalam kolom `NoCab`.
     
@@ -361,7 +368,7 @@ Hasil dari perintah ini adalah daftar setiap cabang (`NoCab`) yang ada dalam tab
 
 # Menghitung rata-rata gaji pegawai di cabang-cabang tertentu
 
-![[assets/lanjutan12.PNG]]
+![](Assets/lanjutan12.png)
 
 - **NoCab**: Kolom ini merujuk pada kode cabang dalam tabel `pegawai`. Perintah ini akan mengelompokkan data berdasarkan nilai dalam kolom `NoCab`.
     
@@ -378,7 +385,7 @@ Hasil dari perintah ini adalah daftar cabang-cabang yang memiliki kode 'C101' at
 
 # Menemukan nilai gaji terbesar dan terkecil dari semua pegawai
 
-![[assets/lanjutan13.PNG]]
+![](Assets/lanjutan13.png)
 
 
 - **MAX(Gaji) AS GajiTerbesar**: Fungsi `MAX` digunakan untuk menemukan nilai maksimum dalam kolom `Gaji`. Ini berarti fungsi ini akan mengidentifikasi gaji tertinggi yang ada dalam tabel `pegawai`. Alias `GajiTerbesar` digunakan untuk memberi nama pada hasil dari fungsi `MAX(Gaji)`, sehingga hasilnya akan ditampilkan dengan nama `GajiTerbesar`.
@@ -397,7 +404,7 @@ Kedua nilai ini memberikan gambaran mengenai rentang gaji dalam tabel tersebut.
 
 # Menemukan nilai gaji terbesar dan terkecil dari pegawai yang memiliki jabatan "Manager"
 
-![[assets/lanjutan14.PNG]]
+![](Assets/lanjutan14.png)
 
 
 - **MAX(Gaji) AS GajiTerbesar**: Fungsi `MAX` digunakan untuk menemukan nilai maksimum dalam kolom `Gaji` untuk pegawai yang memenuhi kondisi. Ini berarti fungsi ini akan mengidentifikasi gaji tertinggi di antara pegawai yang memiliki jabatan "Manager". Alias `GajiTerbesar` digunakan untuk memberi nama pada hasil dari fungsi `MAX(Gaji)`, sehingga hasilnya akan ditampilkan dengan nama `GajiTerbesar`.
@@ -418,7 +425,7 @@ Kedua nilai ini memberikan gambaran mengenai rentang gaji untuk pegawai yang mem
 
 # Menemukan gaji terbesar dan terkecil untuk setiap cabang yang memiliki tiga pegawai atau lebih
 
-![[assets/lanjutan15.PNG]]
+![](Assets/lanjutan15.png)
 
 
 - **NoCab**: Kolom ini merujuk pada kode cabang dalam tabel `pegawai`. Perintah ini akan mengelompokkan data berdasarkan nilai dalam kolom `NoCab`.
@@ -438,7 +445,7 @@ Hasil dari perintah ini adalah daftar setiap cabang (`NoCab`) yang memiliki tiga
 
 # Mendapatkan berbagai statistik terkait gaji dari seluruh pegawai
 
-![[assets/lanjutan16.PNG]]
+![](Assets/lanjutan16.png)
 
 
 - **COUNT(NIP) AS JumlahPegawai**: Fungsi `COUNT` digunakan untuk menghitung jumlah pegawai berdasarkan kolom `NIP`. Alias `JumlahPegawai` digunakan untuk memberi nama pada hasil perhitungan ini. Ini memberikan jumlah total pegawai yang terdaftar dalam tabel `pegawai`.
@@ -465,7 +472,8 @@ Hasil dari perintah ini adalah satu baris data yang menunjukkan:
 Perintah ini memberikan gambaran menyeluruh tentang distribusi dan rentang gaji pegawai dalam tabel `pegawai`.
 
 # Memperoleh ringkasan statistik terkait data pegawai
-![[assets/lanjutan17.PNG]]
+
+![](Assets/lanjutan17.png)
 
 - **COUNT(NIP) AS JumlahPegawai**  
     Fungsi `COUNT(NIP)` menghitung jumlah total pegawai berdasarkan kolom `NIP`, yang umumnya adalah identifikasi unik setiap pegawai. Hasil dari fungsi ini memberikan jumlah total pegawai yang ada dalam tabel `pegawai`. Hasil ini diberi alias `JumlahPegawai` untuk memudahkan pembacaan.
@@ -487,7 +495,7 @@ Perintah SQL ini menghasilkan satu baris data yang mencakup jumlah total pegawai
 
 # Menghitung dan menganalisis statistik gaji pegawai
 
-![[assets/lanjutan18.PNG]]
+![](Assets/lanjutan18.png)
 
 
 - **COUNT(NIP) AS JumlahPegawai**  
