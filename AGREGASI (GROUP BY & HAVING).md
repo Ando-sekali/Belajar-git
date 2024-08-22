@@ -41,7 +41,7 @@ Jabatan ENUM('Manager', 'Supervisor', 'Staff'),
 ```
 
 *HASIL :*
-![[assets/create.PNG]]
+![[Assets/create.PNG]]
 
 - `NIP` (tipe integer, berfungsi sebagai primary key)
 - `NDep` (string yang tidak boleh kosong, mewakili nama depan)
