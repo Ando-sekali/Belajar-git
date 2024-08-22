@@ -5,6 +5,7 @@
 TESTTT
 tess
 tess
+tesss
 
 Untuk membuat database baru, gunakan perintah `CREATE DATABASE` di SQL. Berikut adalah contoh sintaks untuk membuat database: 
 ```sql
@@ -17,6 +18,7 @@ CREATE DATABASE pegawai;
 ```
 
 Hasil : 
+
 ![](Assets/database1.png)
 
 - **`CREATE DATABASE`**: Perintah SQL untuk membuat database baru.
