@@ -2,6 +2,8 @@
 
 ## **1. Membuat Database Baru**
 
+TESTTT
+
 Untuk membuat database baru, gunakan perintah `CREATE DATABASE` di SQL. Berikut adalah contoh sintaks untuk membuat database: 
 ```sql
 CREATE DATABASE nama_database;
