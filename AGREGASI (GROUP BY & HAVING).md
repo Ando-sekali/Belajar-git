@@ -15,7 +15,7 @@ CREATE DATABASE pegawai;
 ```
 
 Hasil : 
-![](assets/database1.PNG)
+![](assets/database1.png)
 
 - **`CREATE DATABASE`**: Perintah SQL untuk membuat database baru.
 - **`nama_database`**: Nama yang Anda pilih untuk database baru. Nama ini harus unik dalam server database dan tidak boleh mengandung spasi.
